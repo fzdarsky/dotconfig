@@ -1,0 +1,11 @@
+# ignore everything by default
+*
+
+# except subtrees ...
+!*/
+# ... explicitly mentioned below
+!/dotfiles/**
+!/powerline/**
+
+# and the following files
+!.gitignore

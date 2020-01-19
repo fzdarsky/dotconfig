@@ -1,0 +1,12 @@
+[user]
+name = Frank A. Zdarsky
+email = fzdarsky@redhat.com
+
+[gitreview]
+username = fzdarsky
+
+[credential]
+helper = cache
+
+[color]
+ui = auto
