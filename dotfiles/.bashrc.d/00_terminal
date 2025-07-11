@@ -1,0 +1,19 @@
+# Terminal settings and configurations
+
+## Disable terminal flow control (ctrl+s "freezing" terminal) if on an interactive shell.
+[[ $- == *i* ]] && stty -ixon
+
+## Add color() function to color output to stderr in red
+## (from: https://serverfault.com/questions/59262/bash-print-stderr-in-red-color)
+color()(set -o pipefail;"$@" 2> >(sed $'s,.*,\e[31m&\e[m,'>&2))
+
+## Setup dircolors
+#eval `dircolors ~/.config/dotfiles/.dircolors/dircolors.myconfig`
+
+## Setup powerline
+if command -v powerline-daemon >/dev/null 2>&1; then
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    . /usr/share/powerline/bash/powerline.sh
+fi

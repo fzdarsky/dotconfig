@@ -1,0 +1,8 @@
+# Define aliases
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+alias ls='ls -h -N --color=auto --group-directories-first'
+alias ll='ls -l -h -N --color=auto --group-directories-first'
+alias la='ls -a -l -h -N --color=auto --group-directories-first'

@@ -1,0 +1,11 @@
+# Configure pip
+## source: Hitchhiker's Guide to Python
+
+## cache frequently used packages locally
+#export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+## keep clean by requiring pip to run only in virtenvs; use gpip to override
+#export PIP_REQUIRE_VIRTUALENV=true
+#gpip() {
+#	PIP_REQUIRE_VIRTUALENV="" pip "$@"
+#}

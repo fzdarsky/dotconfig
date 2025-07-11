@@ -1,0 +1,6 @@
+# Define paths and other global env vars
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+#export JAVA_HOME="/usr/java/latest"
