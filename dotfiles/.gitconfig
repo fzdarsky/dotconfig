@@ -1,12 +1,22 @@
 [user]
 name = Frank A. Zdarsky
 email = fzdarsky@redhat.com
+signingkey = /home/fzdarsky/.ssh/id_rsa.pub
 
 [gitreview]
 username = fzdarsky
 
 [credential]
 helper = cache
+
+[gpg]
+format = ssh
+
+[gpg "ssh"]
+allowedSignersFile = /home/fzdarsky/.config/git/allowed_signers
+
+[pull]
+ff = only
 
 [color]
 ui = auto
