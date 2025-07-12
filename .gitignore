@@ -5,6 +5,7 @@
 !*/
 # ... explicitly mentioned below
 !/dotfiles/**
+!/git/**
 !/powerline/**
 
 # and the following files
