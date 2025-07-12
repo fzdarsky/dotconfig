@@ -3,6 +3,13 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias ls='ls -h -N --color=auto --group-directories-first'
-alias ll='ls -l -h -N --color=auto --group-directories-first'
-alias la='ls -a -l -h -N --color=auto --group-directories-first'
+case $(uname) in
+  Darwin) alias ls='gls -h -N --color=auto --group-directories-first'
+          alias ll='gls -l -h -N --color=auto --group-directories-first'
+          alias la='gls -a -l -h -N --color=auto --group-directories-first'
+          ;;
+  Linux)  alias ls='ls -h -N --color=auto --group-directories-first'
+          alias ll='ls -l -h -N --color=auto --group-directories-first'
+          alias la='ls -a -l -h -N --color=auto --group-directories-first'
+          ;;
+esac

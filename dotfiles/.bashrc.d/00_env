@@ -1,6 +1,12 @@
 # Define paths and other global env vars
 
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
 
-#export JAVA_HOME="/usr/java/latest"
+export PATH=$PATH:$GOPATH/bin
+case $(uname) in
+  Darwin) export PATH=/opt/homebrew/bin:$PATH;;
+esac
+
+#export JAVA_HOME="/usr/java/latest
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
