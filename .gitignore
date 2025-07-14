@@ -1,12 +1,11 @@
 # ignore everything by default
-*
+/*
+/*/
 
-# except subtrees ...
-!*/
 # ... explicitly mentioned below
-!/dotfiles/**
-!/git/**
-!/powerline/**
+!/dotfiles/
+!/git/
 
 # and the following files
 !.gitignore
+!starship.toml
