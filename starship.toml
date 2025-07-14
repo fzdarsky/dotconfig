@@ -1,14 +1,31 @@
 format = """
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
+[](fg:#a3aed2)\
+$username\
+$hostname\
+[](fg:#a3aed2 bg:#769ff0)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
-$time\
-[ ](fg:#1d2230)\
-\n$character"""
+$character"""
+
+[character]
+success_symbol = '[](#394260)'
+error_symbol = '[](bold red)'
+
+[username]
+show_always = true
+style_user = "fg:#090c0c bg:#a3aed2"
+style_root = "fg:#090c0c bg:#a3aed2"
+format = '[ $user@]($style)'
+disabled = false
+
+[hostname]
+ssh_only = false
+style = "fg:#090c0c bg:#a3aed2"
+format = '[$ssh_symbol$hostname ]($style)'
+aliases = { "head" = "" }
+disabled = false
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
@@ -26,14 +43,9 @@ truncation_symbol = "…/"
 symbol = ""
 style = "bg:#394260"
 format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+truncation_length = 8
+truncation_symbol = '…'
 
 [git_status]
 style = "bg:#394260"
 format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
-
