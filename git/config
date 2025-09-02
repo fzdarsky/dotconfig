@@ -1,7 +1,7 @@
 [user]
 name = Frank A. Zdarsky
 email = fzdarsky@redhat.com
-signingkey = /home/fzdarsky/.ssh/id_rsa.pub
+signingkey = /home/fzdarsky/.ssh/id_fzdarsky_redhat_gh.pub
 
 [gitreview]
 username = fzdarsky
