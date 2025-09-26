@@ -29,7 +29,8 @@ case $(uname) in
   Linux)  sudo dnf -y install \
               wget \
               bind-utils \
-              net-tools
+              net-tools \
+              usbutils
           ;;
   Darwin) brew install \
               wget
@@ -49,7 +50,10 @@ case $(uname) in
               go-rpm-macros \
               bzip2 \
               jq \
-              zstd
+              zstd \
+              shellcheck
+          sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+          sudo dnf install gh --repo gh-cli
           ;;
   Darwin) ;;
 esac
