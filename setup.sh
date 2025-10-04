@@ -51,7 +51,8 @@ case $(uname) in
               bzip2 \
               jq \
               zstd \
-              shellcheck
+              shellcheck \
+              protobuf-compiler
           sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
           sudo dnf install gh --repo gh-cli
           ;;
@@ -81,9 +82,14 @@ esac
 
 # Install Claude
 case $(uname) in
-  Linux)  sudo dnf module -y reset nodejs
-          sudo dnf module -y enable nodejs:22
-          sudo dnf module install -y nodejs:22/common npm
+  Linux)  case ${VERSION_ID%.*} in
+          9)    sudo dnf module -y reset nodejs
+                sudo dnf module -y enable nodejs:22
+                sudo dnf module install -y nodejs:22/common npm
+                ;;
+          10)   sudo dnf install -y nodejs-npm
+                ;;
+          esac
           ;;
   Darwin) brew install node
           ;;
