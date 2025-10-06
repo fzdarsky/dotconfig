@@ -1,7 +1,7 @@
 [user]
 name = Frank A. Zdarsky
 email = fzdarsky@redhat.com
-signingkey = /home/fzdarsky/.ssh/id_fzdarsky_redhat_gh.pub
+signingkey = $HOME/.ssh/id_fzdarsky_redhat_gh.pub
 
 [gitreview]
 username = fzdarsky
@@ -13,7 +13,7 @@ helper = cache
 format = ssh
 
 [gpg "ssh"]
-allowedSignersFile = /home/fzdarsky/.config/git/allowed_signers
+allowedSignersFile = $HOME/.config/git/allowed_signers
 
 [pull]
 ff = only
