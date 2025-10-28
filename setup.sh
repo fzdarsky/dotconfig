@@ -52,9 +52,10 @@ case $(uname) in
               jq \
               zstd \
               shellcheck \
-              protobuf-compiler
+              protobuf-compiler \
+              rpmdevtools rpmlint
           sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-          sudo dnf install gh --repo gh-cli
+          sudo dnf -y install gh --repo gh-cli
           ;;
   Darwin) ;;
 esac
